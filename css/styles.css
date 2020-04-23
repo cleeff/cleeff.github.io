@@ -4,6 +4,10 @@ html {
 	font-family: 'Roboto', sans-serif;
 }
 
+.hex {
+	margin: 20px;
+}
+
 @media (min-width: 576px) {
 	html {
 		font-size: 14px;
