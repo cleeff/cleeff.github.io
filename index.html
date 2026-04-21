@@ -11,10 +11,6 @@
 	<style>
 		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		html, body {
-			height: 100%;
-		}
-
 		body {
 			font-family: 'DM Sans', sans-serif;
 			background: #fafaf8;
@@ -34,11 +30,12 @@
 
 		h1 {
 			font-family: 'DM Serif Display', serif;
-			font-size: clamp(48px, 7.5vw, 65px);
+			font-size: clamp(40px, 9vw, 65px);
 			font-weight: 400;
 			line-height: 1.08;
 			margin-bottom: 16px;
 			letter-spacing: -0.01em;
+			overflow-wrap: break-word;
 		}
 
 		.tagline {
@@ -114,8 +111,13 @@
 			text-align: left;
 		}
 
-		.credential:hover::after {
+		.credential:hover::after,
+		.credential:focus::after {
 			opacity: 1;
+		}
+
+		.credential:focus {
+			outline: none;
 		}
 
 		.links {
@@ -212,7 +214,7 @@
 		<h1>Pascal Van Cleeff</h1>
 
 		<p class="tagline">Senior Research Engineer at Google DeepMind<br>
-			Agents in Chip Design<br>
+			working on Agents in Chip Design<br>
 			PhD in Applied Mathematics
 		</p>
 
@@ -224,11 +226,11 @@
 		</div>
 
 		<div class="credentials">
-			<div class="credential" data-tip="Grade: excellent (1.0). Bachelor Prize for best undergraduate physics student in Bonn. University of Bonn."><span>BSc</span>Physics, Bonn</div>
-			<div class="credential" data-tip="Distinction (90/100). Johnstone year prize for best 4th-year student. Baylis Scholarship. Dirac Prize. St. John's College."><span>MASt</span>Applied Mathematics, Cambridge · Distinction</div>
-			<div class="credential" data-tip="Algorithms for cell layout in chip design. Collaboration with IBM. Presented at several conferences."><span>PhD</span>Discrete Mathematics, Bonn</div>
-			<div class="credential" data-tip="International Symposium on Physical Design 2017. Nominated for Best Paper Award."><span>↗</span>ISPD 2017 Best Paper nominee</div>
-			<div class="credential" data-tip="International Physics Olympiad 2009."><span>🥈</span>IPhO 2009 Silver Medal</div>
+			<div class="credential" tabindex="0" data-tip="Grade: excellent (1.0). Bachelor Prize for best undergraduate physics student in Bonn. University of Bonn."><span>BSc</span>Physics, Bonn</div>
+			<div class="credential" tabindex="0" data-tip="Distinction (90/100). Johnstone year prize for best 4th-year student. Baylis Scholarship. Dirac Prize. St. John's College."><span>MASt</span>Applied Mathematics, Cambridge</div>
+			<div class="credential" tabindex="0" data-tip="Algorithms for cell layout in chip design. Collaboration with IBM. Presented at several conferences."><span>PhD</span>Discrete Mathematics, Bonn</div>
+			<div class="credential" tabindex="0" data-tip="International Symposium on Physical Design 2017. Nominated for Best Paper Award."><span>↗</span>ISPD 2017 Best Paper nominee</div>
+			<div class="credential" tabindex="0" data-tip="International Physics Olympiad 2009."><span>🥈</span>IPhO 2009 Silver Medal</div>
 		</div>
 
 		<div class="links">
