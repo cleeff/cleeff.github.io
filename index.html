@@ -1,52 +1,255 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pascal Van Cleeff · Research Engineer at Google DeepMind</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-	<title>Pascal Van Cleeff | PhD in Applied Mathematics | Software Engineer at Google</title>
+		html, body {
+			height: 100%;
+		}
 
-	<link rel="icon" href="favicon.ico" type="image/png" />
+		body {
+			font-family: 'DM Sans', sans-serif;
+			background: #fafaf8;
+			color: #1a1a1a;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			padding: 40px 24px;
+		}
 
-	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto:300" rel="stylesheet">
-	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<!--<link rel="stylesheet" href="css/themes/indigo-white.css">-->
-	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-indigo.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-blue.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-grey.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/white-red.css"> -->
-	<!-- <link rel="stylesheet" href="css/themes/yellow-black.css"> -->
+		main {
+			text-align: center;
+			max-width: 480px;
+			width: 100%;
+		}
+
+		h1 {
+			font-family: 'DM Serif Display', serif;
+			font-size: clamp(48px, 7.5vw, 65px);
+			font-weight: 400;
+			line-height: 1.08;
+			margin-bottom: 16px;
+			letter-spacing: -0.01em;
+		}
+
+		.tagline {
+			font-size: 20px;
+			color: #666;
+			line-height: 1.7;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+
+		.former-name {
+			font-size: 15px;
+			color: #bbb;
+			margin-bottom: 24px;
+			font-style: italic;
+		}
+
+		.location {
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			font-size: 15px;
+			color: #aaa;
+			margin-bottom: 28px;
+		}
+
+		.credentials {
+			display: flex;
+			gap: 8px;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 32px;
+		}
+
+		.credential {
+			font-size: 15px;
+			color: #777;
+			background: #f2f1ee;
+			border-radius: 4px;
+			padding: 5px 10px;
+			font-weight: 400;
+			white-space: nowrap;
+			position: relative;
+			cursor: help;
+			border-bottom: 1.5px dotted #bbb;
+		}
+
+		.credential span {
+			color: #aaa;
+			margin-right: 5px;
+		}
+
+		.credential::after {
+			content: attr(data-tip);
+			position: absolute;
+			bottom: calc(100% + 8px);
+			left: 50%;
+			transform: translateX(-50%);
+			background: #1a1a1a;
+			color: #f0efec;
+			font-size: 12px;
+			line-height: 1.5;
+			font-weight: 400;
+			white-space: normal;
+			width: 220px;
+			padding: 9px 12px;
+			border-radius: 6px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.15s;
+			z-index: 10;
+			text-align: left;
+		}
+
+		.credential:hover::after {
+			opacity: 1;
+		}
+
+		.links {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 28px;
+		}
+
+		.link-btn {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			padding: 9px 18px;
+			white-space: nowrap;
+			border: 1px solid #e0e0e0;
+			border-radius: 6px;
+			color: #333;
+			font-size: 17px;
+			font-family: 'DM Sans', sans-serif;
+			background: #fff;
+			text-decoration: none;
+			cursor: pointer;
+			transition: border-color 0.15s, box-shadow 0.15s;
+		}
+
+		.link-btn:hover {
+			border-color: #c0c0c0;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+		}
+
+		.hex-card {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			padding: 14px 20px;
+			background: #fff;
+			border: 1px solid #e8e8e4;
+			border-radius: 10px;
+			text-decoration: none;
+			text-align: left;
+			color: inherit;
+			transition: border-color 0.15s, box-shadow 0.15s;
+			box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+		}
+
+		.hex-card:hover {
+			border-color: #c8c8c0;
+			box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+		}
+
+		.hex-card img {
+			width: 52px;
+			height: 52px;
+			object-fit: contain;
+			border-radius: 8px;
+			flex-shrink: 0;
+		}
+
+		.hex-card-text {
+			flex: 1;
+			min-width: 0;
+		}
+
+		.hex-card-title {
+			font-size: 17px;
+			font-weight: 500;
+			color: #1a1a1a;
+			margin-bottom: 3px;
+		}
+
+		.hex-card-desc {
+			font-size: 16px;
+			color: #888;
+			font-weight: 300;
+			line-height: 1.4;
+		}
+
+		.hex-card-arrow {
+			color: #ccc;
+			flex-shrink: 0;
+			transition: color 0.15s, transform 0.15s;
+		}
+
+		.hex-card:hover .hex-card-arrow {
+			color: #999;
+			transform: translateX(2px);
+		}
+	</style>
 </head>
 <body>
 	<main>
-		<div class="intro">Pascal Van Cleeff</div>
-		<div class="tagline">Software Engineer at Google <br>
-			PhD in Applied Mathematics <br><br>
-			former name: Pascal Cremer
+		<h1>Pascal Van Cleeff</h1>
+
+		<p class="tagline">Senior Research Engineer at Google DeepMind<br>
+			Agents in Chip Design<br>
+			PhD in Applied Mathematics
+		</p>
+
+		<p class="former-name">formerly Pascal Cremer</p>
+
+		<div class="location">
+			<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+			Zurich, Switzerland
 		</div>
-		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
-		<div class="icons-social">
-			<a target="_blank" href="https://www.linkedin.com/in/pascal-van-cleeff"><i class="fab fa-linkedin"></i></a>
-			<a target="_blank" href=pdf/Algorithms_For_Cell_Layout_PhD_Thesis_Pascal_Cremer.pdf><i class="far fa-file-pdf"></i></a>
-			<!-- <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a> -->
-			<!-- <a target="_blank" href="https://dev.to/"><i class="fab fa-dev"></i></a> -->
-			<!-- <a target="_blank" href="https://stackoverflow.com/story/"><i class="fab fa-stack-overflow"></i></a> -->
-			<!-- <a target="_blank" href="https://medium.com/@"><i class="fab fa-medium"></i></a> -->
-			<!-- <a target="_blank" href="https://www.freecodecamp.org"><i class="fab fa-free-code-camp"></i></a> -->
-			<!-- <a target="_blank" href="https://www.behance.net"><i class="fab fa-behance"></i></a> -->
-			<!-- <a target="_blank" href="https://codepen.io"><i class="fab fa-codepen"></i></a> -->
-    </div>
-    <div class=hex>
-		<a href="hex/">
-			<img src="hex.png" alt="hex" width=200 />
+
+		<div class="credentials">
+			<div class="credential" data-tip="Grade: excellent (1.0). Bachelor Prize for best undergraduate physics student in Bonn. University of Bonn."><span>BSc</span>Physics, Bonn</div>
+			<div class="credential" data-tip="Distinction (90/100). Johnstone year prize for best 4th-year student. Baylis Scholarship. Dirac Prize. St. John's College."><span>MASt</span>Applied Mathematics, Cambridge · Distinction</div>
+			<div class="credential" data-tip="Algorithms for cell layout in chip design. Collaboration with IBM. Presented at several conferences."><span>PhD</span>Discrete Mathematics, Bonn</div>
+			<div class="credential" data-tip="International Symposium on Physical Design 2017. Nominated for Best Paper Award."><span>↗</span>ISPD 2017 Best Paper nominee</div>
+			<div class="credential" data-tip="International Physics Olympiad 2009."><span>🥈</span>IPhO 2009 Silver Medal</div>
+		</div>
+
+		<div class="links">
+			<a class="link-btn" href="https://www.linkedin.com/in/pascal-van-cleeff" target="_blank" rel="noopener">
+				<svg width="15" height="15" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+				LinkedIn
+			</a>
+			<a class="link-btn" href="pdf/Algorithms_For_Cell_Layout_PhD_Thesis_Pascal_Cremer.pdf" target="_blank" rel="noopener">
+				<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#cc2200" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg>
+				PhD Thesis
+			</a>
+		</div>
+
+		<a class="hex-card" href="hex/">
+			<img src="hex.png" alt="Hex board game preview">
+			<div class="hex-card-text">
+				<div class="hex-card-title">Hex — Play Against Our AI</div>
+				<div class="hex-card-desc">Play the classic connection game against a neural network we trained from scratch</div>
+			</div>
+			<svg class="hex-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"></path></svg>
 		</a>
-    </div>
 	</main>
 </body>
 </html>
